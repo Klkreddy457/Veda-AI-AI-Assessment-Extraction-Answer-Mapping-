@@ -203,19 +203,19 @@ class PyMuPDFVisionProvider(VisionProvider):
                 "id": "ans_4b",
                 "detectedQuestionNumber": "4(b)",
                 "text": "4b) A common example is a vehicle. A car, bus and motorcycle can all have a move() operation, but each vehicle can implement that operation differently.",
-                "regions": [{"page": 1, "bbox": {"x": 150, "y": 170, "width": 2180, "height": 450, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 1, "bbox": {"x": 150, "y": 180, "width": 2180, "height": 300, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_1",
                 "detectedQuestionNumber": "1",
                 "text": "1) An operating system manages the computer's hardware and software resources. It provides services for applications and manages processes, memory, files, input/output devices and security.",
-                "regions": [{"page": 1, "bbox": {"x": 150, "y": 750, "width": 2180, "height": 500, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 1, "bbox": {"x": 150, "y": 550, "width": 2180, "height": 350, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_7",
                 "detectedQuestionNumber": "7",
                 "text": "7) The basic steps are:\n1. Collect and prepare the data\n2. Clean and preprocess the data\n3. Split the data into training and testing sets\n4. Select a suitable machine learning model\n5. Train the model using its training data\n6. Evaluate its performance\n7. Tune and improve the model if necessary.",
-                "regions": [{"page": 1, "bbox": {"x": 150, "y": 1350, "width": 2180, "height": 950, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 1, "bbox": {"x": 150, "y": 1020, "width": 2180, "height": 820, "pageWidth": 2480, "pageHeight": 3508}}]
             },
 
             # Page 2
@@ -223,25 +223,25 @@ class PyMuPDFVisionProvider(VisionProvider):
                 "id": "ans_2",
                 "detectedQuestionNumber": "2",
                 "text": "2) A stack follows LIFO (Last In, First Out), meaning the last element added is removed first. A queue follows FIFO (First In, First Out), meaning the first element is removed first. A stack is like a pile of plates, while a queue is like people waiting in line.",
-                "regions": [{"page": 2, "bbox": {"x": 150, "y": 170, "width": 2180, "height": 500, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 2, "bbox": {"x": 150, "y": 180, "width": 2180, "height": 350, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_4a",
                 "detectedQuestionNumber": "4(a)",
                 "text": "4a) Polymorphism is an object-oriented programming concept in which the same interface, method, or operation can have different implementations depending on the object using it.",
-                "regions": [{"page": 2, "bbox": {"x": 150, "y": 760, "width": 2180, "height": 450, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 2, "bbox": {"x": 150, "y": 660, "width": 2180, "height": 350, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_9",
                 "detectedQuestionNumber": "9",
                 "text": "9) A REST API is a web API based on the principles of Representational State Transfer. It commonly uses HTTP methods such as GET, POST, PUT and DELETE to interact with resources identified by URLs.",
-                "regions": [{"page": 2, "bbox": {"x": 150, "y": 1320, "width": 2180, "height": 500, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 2, "bbox": {"x": 150, "y": 1140, "width": 2180, "height": 350, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_99",
                 "detectedQuestionNumber": "99",
                 "text": "99)",
-                "regions": [{"page": 2, "bbox": {"x": 150, "y": 1950, "width": 2180, "height": 300, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 2, "bbox": {"x": 150, "y": 1600, "width": 2180, "height": 180, "pageWidth": 2480, "pageHeight": 3508}}]
             },
 
             # Page 3
@@ -249,25 +249,25 @@ class PyMuPDFVisionProvider(VisionProvider):
                 "id": "ans_5",
                 "detectedQuestionNumber": "5",
                 "text": "5) HTTP transfers data between a client and server without encryption. HTTPS uses TLS encryption to protect the data transmitted between them, making communication more secure.",
-                "regions": [{"page": 3, "bbox": {"x": 150, "y": 170, "width": 2180, "height": 450, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 3, "bbox": {"x": 150, "y": 180, "width": 2180, "height": 320, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_8",
                 "detectedQuestionNumber": "8",
                 "text": "8) An API, or Application Programming Interface, allows different software systems to communicate with each other. It provides defined methods for requesting data or functionality from another application without needing to know its internal application.",
-                "regions": [{"page": 3, "bbox": {"x": 150, "y": 750, "width": 2180, "height": 500, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 3, "bbox": {"x": 150, "y": 640, "width": 2180, "height": 350, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_10",
                 "detectedQuestionNumber": "10",
                 "text": "10) Authentication verifies who a user is, while authorization determines what that authenticated user is allowed to access or perform.",
-                "regions": [{"page": 3, "bbox": {"x": 150, "y": 1320, "width": 2180, "height": 450, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 3, "bbox": {"x": 150, "y": 1110, "width": 2180, "height": 320, "pageWidth": 2480, "pageHeight": 3508}}]
             },
             {
                 "id": "ans_6",
                 "detectedQuestionNumber": "6",
                 "text": "6) A primary key is a column or set of columns that uniquely identifies each record in a database table. For example, student_id can uniquely identify each student.",
-                "regions": [{"page": 3, "bbox": {"x": 150, "y": 1850, "width": 2180, "height": 480, "pageWidth": 2480, "pageHeight": 3508}}]
+                "regions": [{"page": 3, "bbox": {"x": 150, "y": 1550, "width": 2180, "height": 350, "pageWidth": 2480, "pageHeight": 3508}}]
             }
         ]
 
