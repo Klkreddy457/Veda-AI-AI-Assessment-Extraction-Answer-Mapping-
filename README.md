@@ -4,11 +4,18 @@ Production-quality web application built for teachers to upload printed question
 
 ---
 
+## 🔗 Submission Links
+
+- **🌐 Live Deployed Application**: [https://veda-ai-ai-assessment-extraction-an.vercel.app/](https://veda-ai-ai-assessment-extraction-an.vercel.app/)
+- **📁 GitHub Repository**: [https://github.com/Klkreddy457/Veda-AI-AI-Assessment-Extraction-Answer-Mapping-.git](https://github.com/Klkreddy457/Veda-AI-AI-Assessment-Extraction-Answer-Mapping-.git)
+
+---
+
 ## 🌟 Key Features
 
 1. **Printed Question Paper Extraction**:
    - Extracts questions in exact printed order.
-   - Parses and isolates sub-questions such as `11(a)` and `11(b)` into independent `Question` objects (`parentNumber: "11"`, `part: "a"`).
+   - Parses and isolates sub-questions such as `11(a)` and `11(b)` or `4(a)` and `4(b)` into independent `Question` objects (`parentNumber: "4"`, `part: "a"`).
    - Generates extraction warnings for sequence gaps or duplicates.
 
 2. **Handwritten Student Answer Extraction & Segmentation**:
@@ -18,18 +25,18 @@ Production-quality web application built for teachers to upload printed question
 
 3. **4-Level Confidence-Based Mapping Engine**:
    - **Level 1 (Explicit Main Number)**: Matches `Q7`, `7.`, `7)` directly (Confidence: 100%).
-   - **Level 2 (Explicit Sub-Question)**: Matches `11(a)` directly to `11(a)` without collapsing into parent question `11` (Confidence: 98%).
+   - **Level 2 (Explicit Sub-Question)**: Matches `4(a)` directly to `4(a)` without collapsing into parent question `4` (Confidence: 98%).
    - **Level 3 (Semantic Similarity)**: Fallback using LLM / keyword embedding similarity when explicit labels are absent (Confidence: 40% - 95%).
    - **Level 4 (Spatial Layout Context)**: Position-based fallback.
    - Categorizes confidence into **High (≥90%)**, **Medium (70–89%)**, and **Needs Review (<70%)**.
 
 4. **Edge Case Resilience**:
-   - **Out-of-Order Answers**: Correctly maps answers regardless of physical page order.
-   - **Unanswered Questions**: Displays clear empty state without jumping to random coordinates.
-   - **Unmatched Answers**: Preserves unknown/unmatched responses (e.g. `Q99`) in a dedicated review list.
+   - **Out-of-Order Answers**: Correctly maps answers regardless of physical page order (e.g. Page 1: 4b, 1, 7; Page 2: 2, 4a, 9; Page 3: 5, 8, 10, 6).
+   - **Unanswered Questions**: Displays clear empty state without jumping to random coordinates (e.g. Question 3).
+   - **Unmatched Answers**: Preserves unknown/unmatched responses (e.g. `Q99`) in a dedicated review list section.
 
 5. **Interactive Document Viewer & SVG Highlight Overlay**:
-   - Renders document with page navigation, zoom, fit-width, fit-page, and page jump tabs.
+   - Renders document with page navigation, zoom, and page jump controls.
    - Auto-scrolls and highlights exact bounding box regions on question selection.
    - Dynamic coordinate normalization (`coordinates.ts`) ensuring pixel-perfect alignment across window sizes and zoom levels.
 
@@ -54,7 +61,7 @@ Production-quality web application built for teachers to upload printed question
               |
               v
   +-----------------------+
-  | Structural Parser     |  <--- Split sub-questions (11a, 11b), validate sequence
+  | Structural Parser     |  <--- Split sub-questions (4a, 4b), validate sequence
   +-----------+-----------+
               |
               v
@@ -92,8 +99,8 @@ As per core engineering guidelines, LLMs are prone to hallucinating numerical sp
 ### 1. Clone & Backend Setup
 
 ```bash
-git clone https://github.com/vedaai/assessment-mapping.git
-cd vedaai-assessment/backend
+git clone https://github.com/Klkreddy457/Veda-AI-AI-Assessment-Extraction-Answer-Mapping-.git
+cd Veda-AI-AI-Assessment-Extraction-Answer-Mapping-/backend
 
 # Install Python dependencies
 pip install -r requirements.txt
@@ -123,28 +130,18 @@ Open `http://localhost:3000` in your browser.
 The backend includes a comprehensive `pytest` suite testing all 7 core scenarios mandated by the specification:
 
 ```bash
-cd vedaai-assessment/backend
+cd backend
 python -m pytest tests
 ```
 
 ### Tested Scenarios:
 1. **Normal Order Mapping**: Questions 1, 2, 3 mapped to Answers 1, 2, 3.
-2. **Out-of-Order Answers**: Answers written as 4, 1, 3 with Question 2 unanswered.
-3. **Subquestions**: `11(a)` and `11(b)` parsed into two distinct `Question` objects.
+2. **Out-of-Order Answers**: Answers written out of order with unanswered questions.
+3. **Subquestions**: `4(a)` and `4(b)` parsed into two distinct `Question` objects.
 4. **Multi-Page Answer Regions**: `Question 5` spanning Page 2 and Page 3.
 5. **Unmatched Answers**: Extra `Q99` answer correctly flagged as unmatched.
 6. **Semantic Matching Fallback**: Mapping unlabeled answers via text similarity.
 7. **Coordinate Transformation**: Verifying bounding box scale normalization.
-
----
-
-## 🐳 Docker Setup
-
-Run backend and frontend together with Docker Compose:
-
-```bash
-docker-compose up --build
-```
 
 ---
 
@@ -164,6 +161,6 @@ OPENAI_API_KEY=your_openai_key
 
 ---
 
-## 📝 Assumptions & Limitations
-- **Handwriting Clarity**: Extracted text quality depends on OCR engine resolution.
-- **Coordinate Scaling**: Assumes document page aspect ratio is preserved during scaling.
+## 📝 Submission Details
+- **Live URL**: [https://veda-ai-ai-assessment-extraction-an.vercel.app/](https://veda-ai-ai-assessment-extraction-an.vercel.app/)
+- **GitHub Repository**: [https://github.com/Klkreddy457/Veda-AI-AI-Assessment-Extraction-Answer-Mapping-.git](https://github.com/Klkreddy457/Veda-AI-AI-Assessment-Extraction-Answer-Mapping-.git)
